@@ -2,6 +2,8 @@ import { createTheme, ThemeProvider } from "@material-ui/core";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./Home/Home";
 import Subscribers from "./components/Subscribers/Subscribers";
+import users from "./Data.js";
+import { useState } from "react";
 
 const theme = createTheme({
   palette: {
@@ -12,7 +14,6 @@ const theme = createTheme({
       main: "#E3E8E8",
     },
   },
-  
 });
 theme.typography.h1 = {
   fontSize: "2rem",
@@ -24,12 +25,23 @@ theme.typography.h1 = {
   },
 };
 function App() {
+  const [userData, setUserData] = useState(users);
+
   return (
     <ThemeProvider theme={theme}>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/subscribers" element={<Subscribers />} />
+          <Route
+            exact
+            path="/"
+            element={<Home newUserData={userData} setUserData={setUserData} />}
+          />
+          <Route
+            exact
+            path="/subscribers"
+            newUserData={userData}
+            element={<Subscribers />}
+          />
         </Routes>
       </Router>
     </ThemeProvider>

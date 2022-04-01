@@ -3,11 +3,11 @@ import Layout from '../Layout/Layout'
 import Table from '../Table'
 import Container from "@material-ui/core/Container";
 
-const Subscribers = () => {
+const Subscribers = ({newUserData}) => {
     return (
       <Layout>
         <Container>
-          <Table />
+          {<Table newUserData={newUserData} />}
         </Container>
       </Layout>
     );

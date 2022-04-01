@@ -11,6 +11,9 @@ const useStyles = makeStyles({
   root: {
     maxWidth: 345,
     borderColor: "#EBF2F2",
+    "@media (min-width:360px)": {
+      marginBottom: "2rem",
+    },
   },
   media: {
     height: 140,
@@ -22,7 +25,7 @@ export default function MediaCard() {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} >
         <Card xs={12} md={4} className={classes.root}>
           <CardActionArea className="card_content">
             <CardMedia
@@ -34,7 +37,7 @@ export default function MediaCard() {
               <Typography gutterBottom variant="h5" component="h2">
                 Fast Services
               </Typography>
-              <Typography variant="body2"  component="p">
+              <Typography variant="body2" component="p">
                 We offer fast and reliable services to our users and ensure user
                 friendly services
               </Typography>
@@ -54,7 +57,7 @@ export default function MediaCard() {
               <Typography gutterBottom variant="h5" component="h2">
                 P2P
               </Typography>
-              <Typography variant="body2"  component="p">
+              <Typography variant="body2" component="p">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 Reprehenderit, nisi?
               </Typography>
@@ -72,7 +75,7 @@ export default function MediaCard() {
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                various coin choices.
+                Various coin choices.
               </Typography>
               <Typography variant="body2" component="p">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,

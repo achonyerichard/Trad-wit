@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
   },
 }));
-const Home = () => {
+const Home = ({userData,setUserData}) => {
   const classes = useStyles();
   return (
     <>
@@ -38,7 +38,7 @@ const Home = () => {
           <Card />
         </Container>
         <Container>
-          <Form />
+          <Form setUserData={setUserData} userData ={userData} />
         </Container>
       </Layout>
     </>
