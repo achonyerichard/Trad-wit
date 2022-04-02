@@ -48,7 +48,7 @@ const Form = ({ userData, setUserData }) => {
       return;
     }
 
-    console.log(userData);
+    // console.log(userData);
   }, [userData]);
 
   const handleSubmit = (e) => {
@@ -60,17 +60,17 @@ const Form = ({ userData, setUserData }) => {
     if (!email) setEmailError(true);
 
     if (name && email) {
-      console.log("sent");
+      // console.log("sent");
       const formData = {
         id: Date.now(),
         name,
         email,
       };
-      console.log(formData);
+      // console.log(formData);
       setUserData((userData) => [formData, ...userData]);
-      console.log(formData);
-      console.log(userData);
-      
+      // console.log(formData);
+      // console.log(userData);
+      setName("")
     }
   };
 

@@ -25,7 +25,7 @@ export default function MediaCard() {
 
   return (
     <Grid container>
-      <Grid item xs={12} md={4} >
+      <Grid item xs={12} md={4} className="at-item">
         <Card xs={12} md={4} className={classes.root}>
           <CardActionArea className="card_content">
             <CardMedia
@@ -45,7 +45,7 @@ export default function MediaCard() {
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} className="at-item2">
         <Card xs={12} md={4} className={classes.root}>
           <CardActionArea className="card_content">
             <CardMedia
@@ -65,7 +65,7 @@ export default function MediaCard() {
           </CardActionArea>
         </Card>
       </Grid>
-      <Grid item xs={12} md={4}>
+      <Grid item xs={12} md={4} className="at-item3">
         <Card xs={12} md={4} className={classes.root}>
           <CardActionArea className="card_content">
             <CardMedia

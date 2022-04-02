@@ -7,7 +7,6 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
-import users from "../Data";
 
 
 const useStyles = makeStyles({
@@ -16,28 +15,31 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BasicTable({ userData }) {
+export default function BasicTable({ newUserData }) {
   const classes = useStyles();
-  console.log(userData);
+
+  console.log(newUserData);
+
+ 
 
   return (
     <TableContainer className="table" component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <TableCell>S/N</TableCell>
-            <TableCell align="right">Name</TableCell>
-            <TableCell align="right">Email</TableCell>
+            <TableCell>User ID</TableCell>
+            <TableCell align="left">Name</TableCell>
+            <TableCell align="left">Email</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {users.map((user) => (
-            <TableRow key={user.id}>
-              <TableCell component="th" scope="row">
-                {user.name}
+          {newUserData.map((user) => (
+            <TableRow align="left" key={user.id}>
+              <TableCell align="left"  component="th" scope="row">
+                {user.id}
               </TableCell>
-              <TableCell align="right">{user.name}</TableCell>
-              <TableCell align="right">{user.email}</TableCell>
+              <TableCell align="left">{user.name}</TableCell>
+              <TableCell align="left">{user.email}</TableCell>
             </TableRow>
           ))}
         </TableBody>
