@@ -22,7 +22,7 @@ const Home = ({userData,setUserData}) => {
       <Layout>
         <Container className="main_text">
           <Box className={classes.box}>
-            <Typography variant="h1">Welcome to Trad-Wit</Typography>
+            <Typography variant="h1">Welcome to Trade-Wit</Typography>
           </Box>
 
           <Typography variant="body1">

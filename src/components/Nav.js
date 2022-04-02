@@ -38,7 +38,7 @@ const Nav = () => {
         <Toolbar>
           <Box component="span" className={classes.box}>
             <Typography variant="h6" className={classes.title}>
-              Trad-Wit
+              Trade-Wit
             </Typography>
             < AccountBalanceOutlinedIcon className={classes.icon} />
           </Box>
