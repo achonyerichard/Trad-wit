@@ -75,7 +75,7 @@ const Form = ({ userData, setUserData }) => {
       // console.log(formData);
       // console.log(userData);
       setName("")
-       navigate("/");
+       navigate("/subscribers");
     }
   };
 
