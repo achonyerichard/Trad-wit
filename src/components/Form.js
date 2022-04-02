@@ -4,6 +4,7 @@ import { Container, TextField } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import { Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles({
   field: {
@@ -32,8 +33,11 @@ const useStyles = makeStyles({
   },
 });
 
+
+
 const Form = ({ userData, setUserData }) => {
 //console.log(setUserData);
+  const navigate = useNavigate();
   const classes = useStyles();
 
   const [name, setName] = useState("");
@@ -71,6 +75,7 @@ const Form = ({ userData, setUserData }) => {
       // console.log(formData);
       // console.log(userData);
       setName("")
+       navigate("/");
     }
   };
 
